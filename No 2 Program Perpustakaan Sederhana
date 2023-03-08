@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  int a;
+  cout << "\n---Program Perpustakaan Sederhana Dengan Insertion Sort---\n" << endl;
+  cout << "Masukan banyak buku: ";
+  cin >> a;
+  string buku[a];
+  for (int i = 0; i < a; i++) {
+    cout << "Masukan judul buku ke " << i + 1 << " : ";
+    cin >> buku[i];
+  }
+  for (int i = 1; i < a; i++) {
+    string key = buku[i];
+    int j = i - 1;
+    while (j >= 0 && buku[j] > key) {
+      buku[j + 1] = buku[j];
+      j--;
+    }
+    buku[j + 1] = key;
+    cout << endl;
+    cout << "Proses pengurutan judul buku: " << endl;
+    for (int k = 0; k < a; k++) {
+      cout << buku[k] << endl;
+    }
+  }
+  cout << "\nJudul buku yang sudah diurutkan: " << endl;
+  for (int k = 0; k < a; k++) {
+    cout << buku[k] << endl;
+  }
+}
