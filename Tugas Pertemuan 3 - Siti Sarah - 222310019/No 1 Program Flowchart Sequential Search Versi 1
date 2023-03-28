@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+int main() {
+  
+  int mid[20];
+  int Posisi[20];
+  int x, n, data_cari, L = 0;
+  bool ketemu;
+
+  cout << "Masukkan jumlah deret bilangan = ";
+  cin >> n;
+  cout << endl;
+
+  for (x = 0; x < n; x++) {
+    cout << "Nilai bilangan ke-" << x << " = ";
+    cin >> mid[x];
+  }
+
+  cout << "\nDeret Bilangan = ";
+  for (x = 0; x < n; x++)
+    cout << mid[x] << " ";
+
+  cout << "\n\nMasukkan bilangan yang akan dicari = ";
+  cin >> data_cari;
+
+  for (x = 0; x < n; x++) {
+    if (mid[x] == data_cari) {
+      ketemu = true;
+      Posisi[L] = x;
+      L++;
+    }
+  }
+  if (ketemu) {
+    cout << "Bilangan ditemukan pada indeks ke-";
+    for(x=0; x<L; x++)
+    cout << Posisi[x] << endl;
+  } else
+    cout << "Bilangan tidak ditemukan";
+  getchar();
+}
