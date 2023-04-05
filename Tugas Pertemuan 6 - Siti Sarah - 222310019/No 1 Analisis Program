@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+
+class contoh {
+private:
+  int nilai;
+public:
+  contoh (int n) { 
+    nilai = n; 
+  }
+
+  int getNum() { 
+    return nilai; 
+  }
+};
+
+int main() {
+  contoh obj(10);
+  cout << "nilai yang diinput: " << obj.getNum() << endl;
+  return 0;
+}
+
+//Analisis Program diatas
+//Baris 1, disebut header, <iostream> adalah file header standar yang dipakai pada C++, #include adalah perintah untuk memasukan file header ke dalam program.
+//Baris 2, merupakan perintah untuk mendeklarasikan/memberitahukan kepada compiler bahwa kita akan menggunakan fungsi/class/file yang ada didalamnya.
+//Baris 4, merupakan perintah untuk mendefinisikan sebuah class dengan nama contoh.
+//Baris 5, merupakan perintah untuk hak akses private, akses private ini hanya bisa diakses oleh class itu sendiri.
+//Baris 6, merupakan perintah untuk mendeklarasikan variabel nilai dengan tipe data integer.
+//Baris 7, merupakan perintah untuk hak akses public, akses public ini dapat mengakses semua bagian dari program.
+//Baris 8-9, merupakan perintah untuk mendefinisikan constructor pada class contoh yang menerima sebuah parameter bertipe integer bernama n dan mengatur nilai pada variabel nilai menjadi n.
+//Baris 12-13, merupakan perintah untuk mendefinisikan sebuah method bernama "getNum" yang akan mengembalikan nilai dari variabel nilai.
+//Baris 17, fungsi utama program
+//Baris 18, merupakan perintah untuk membuat objek dari class contoh dengan nama obj dan menginisialisasi objek tersebut dengan nilai 10.
+//Baris 19, merupakan perintah untuk mencetak nilai dari objek dengan memanggil method getNum melalui operator titik dan mengembalikan nilai tersebut ke fungsi cout.
+//Baris 20, merupakan perintah untuk mengakhiri program, yang menandakan bahwa kode telah selesai dieksekusi dengan exit code 0.
+
+//Program tersebut merupakan penerapan dari program constructor 
