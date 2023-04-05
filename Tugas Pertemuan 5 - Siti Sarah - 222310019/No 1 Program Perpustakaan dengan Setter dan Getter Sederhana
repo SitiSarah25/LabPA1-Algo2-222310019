@@ -1,0 +1,64 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Perpustakaan {
+private:
+  string judul;
+  string pengarang;
+
+public:
+  void setJudul(string j) { 
+    judul = j; 
+  }
+  void setPengarang(string p) { 
+    pengarang = p; 
+  }
+  string getJudul() { 
+    return judul; 
+  }
+  string getPengarang() { 
+    return pengarang; 
+  }
+};
+
+class Pelajar {
+private:
+  string nama;
+  int umur;
+
+public:
+  void setNama(string n) { 
+    nama = n; 
+  }
+  void setUmur(int u) { 
+    umur = u; 
+  }
+  string getNama() { 
+    return nama; 
+  }
+  int getUmur() { 
+    return umur; 
+  }
+  void pinjamBuku(Perpustakaan buku) {
+    cout << "Pelajar bernama " << nama << " meminjam buku " << buku.getJudul() << " karya " << buku.getPengarang() << endl;
+  }
+  void kembalikanBuku(Perpustakaan buku) {
+    cout << "\nPelajar bernama " << nama << " telah mengembalikan buku " << buku.getJudul() << " karya " << buku.getPengarang() << endl;
+  }
+};
+
+int main() {
+  Perpustakaan buku;
+  buku.setJudul("Laskar Pelangi");
+  buku.setPengarang("Andrea Hirata");
+
+  Pelajar pljr;
+  pljr.setNama("Siti Sarah");
+  pljr.setUmur(19);
+
+  pljr.pinjamBuku(buku);
+  pljr.kembalikanBuku(buku);
+
+  return 0;
+}
